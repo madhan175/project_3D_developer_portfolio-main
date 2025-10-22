@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.cover-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  z-index: 999;
+  transition: opacity 1s ease-in-out;
+}
+
+.portfolio-main {
+  display: none; /* Initially hidden, will be shown after animation */
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@keyframes organic-movement {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.futuristic-element {
+  animation: organic-movement 2s infinite;
+}
